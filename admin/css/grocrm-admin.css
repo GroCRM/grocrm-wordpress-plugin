@@ -1,0 +1,248 @@
+/*  Body margin fix */
+body.grocrm-page #wpcontent {
+    padding-left: 0px;
+}
+
+.grocrm-page * {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    box-sizing: border-box;
+}
+
+.grocrm-page small {
+    font-size: 80%;
+}
+
+.grocrm-page hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(156, 156, 156, 1);
+}
+
+.grocrm-page h1,
+.grocrm-page h2,
+.grocrm-page h3,
+.grocrm-page h4,
+.grocrm-page h5,
+.grocrm-page h6 {
+    font-weight: 300;
+}
+
+.grocrm-page h1 { font-size: 36px; }
+.grocrm-page h2 { font-size: 30px; }
+.grocrm-page h3 { font-size: 24px; }
+.grocrm-page h4 { font-size: 18px; }
+.grocrm-page h5 { font-size: 14px; }
+.grocrm-page h6 { font-size: 12px; }
+
+.grocrm-page h1 small,
+.grocrm-page h2 small,
+.grocrm-page h3 small,
+.grocrm-page h4 small,
+.grocrm-page h5 small,
+.grocrm-page h6 small {
+    font-weight: 200;
+    color: #777;
+}
+
+.grocrm-page h1 small,
+.grocrm-page h2 small,
+.grocrm-page h3 small {
+    font-size: 65%;
+}
+
+.grocrm-page h4 small,
+.grocrm-page h5 small,
+.grocrm-page h6 small {
+    font-size: 75%;
+}
+
+.grocrm-body {
+    width: 100%;
+    background-color: #FDB12A;
+}
+
+/* Tabs */
+.grocrm-body input[name=grocrm-tabs], .grocrm-tab-content {
+    clear: both;
+    display: none;
+}
+
+.grocrm-tab-content {
+    padding: 20px;
+}
+
+.grocrm-tab {
+    display: block;
+    float: left;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background-color: #A77418;   
+    padding: 20px 30px; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.grocrm-tab:first-of-type {
+    margin-left: 20px;
+}
+
+#grocrm-tab1:checked ~ #grocrm-content1 , #grocrm-tab2:checked ~ #grocrm-content2 {
+  display: block;
+  padding-top: 50px;
+  background-color: #ffffff;
+}
+
+[id^="grocrm-tab"]:checked + label {
+  background: #ffffff;
+  color: black;
+}
+
+.grocrm-error {
+    color: #FC363B;
+}
+
+
+/* Containers */
+.grocrm-container {
+    padding: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.grocrm-container:after, .grocrm-container:before {
+    display: table;
+    content: " ";
+}
+
+.grocrm-container:after {
+    clear:both;
+}
+
+.grocrm-header {
+    display: block;
+    background-color: #272C31;
+    margin: 0px;
+    padding: 0px;
+}
+
+.grocrm-header h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.grocrm-header h3 {
+    color: #888b8d;
+    font-weight: 200;
+    text-align: center;
+}
+
+.grocrm-header img {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: middle;
+
+}
+
+.grocrm-background-analytic {
+    background: url(../images/gro_crm_background_wave.png);
+    background-size: 125% 100%;
+    background-repeat: no-repeat;  
+    height: 264px; 
+}
+
+
+.grocrm-settings-section h2 {
+    font-size: 28px;
+    line-height: 30px;
+    padding-top:20px;
+    padding-bottom:0px;
+    font-weight: 500;
+}
+
+.grocrm-btn {
+    border: 0px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px 16px;
+    color: #ffffff;
+    background-color: #5cb85c;
+}
+
+.grocrm-btn:hover {
+    background-color: #449d44;
+}
+
+.grocrm-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.grocrm-table td, .grocrm-table th {
+    border: none;
+    text-align: left;
+    padding: 10px 0px;
+}
+
+.grocrm-table th:first-child {
+    width: 33.33%;
+}
+
+/* Grid System */
+.grocrm-row {
+    font: 16px;
+    line-height: 34px;
+}
+
+.grocrm-row textarea {
+    width: 100%;
+    border-radius: 4px;
+    resize: vertical;
+    display: block;
+}
+
+.grocrm-row input[type="text"], .grocrm-row input[type="password"] {
+    width: 100%;
+    height: 34px;
+    border-radius: 4px;
+}
+
+.grocrm-row input[type="text"]::-webkit-input-placeholder, .grocrm-row input[type="password"]::-webkit-input-placeholder {
+    color: #c1c1c1;
+}
+
+.grocrm-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="grocrm-col-"] {
+    float: left;
+    padding: 10px 0px;
+    border: none;
+    font-size: 16px; 
+}
+
+.grocrm-col-1 {width: 8.33%;}
+.grocrm-col-2 {width: 16.66%;}
+.grocrm-col-3 {width: 25%;}
+.grocrm-col-4 {width: 33.33%;}
+.grocrm-col-5 {width: 41.66%;}
+.grocrm-col-6 {width: 50%;}
+.grocrm-col-7 {width: 58.33%;}
+.grocrm-col-8 {width: 66.66%;}
+.grocrm-col-9 {width: 75%;}
+.grocrm-col-10 {width: 83.33%;}
+.grocrm-col-11 {width: 91.66%;}
+.grocrm-col-12 {width: 100%;}

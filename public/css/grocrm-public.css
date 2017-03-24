@@ -1,0 +1,36 @@
+.grocrm-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+ 
+.grocrm-subheader {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+ 
+.grocrm-field select,
+.grocrm-submit,
+.grocrm-submit input {
+    width: 100%;
+}
+ 
+.grocrm-field {
+    padding: 15px 0px;
+}
+ 
+.grocrm-submit {
+    padding: 25px 15px;
+}
+ 
+.grocrm-submit input[type="submit"] {
+    color: #ffffff;
+    background-color: #5cb85c;
+}
+ 
+.grocrm-submit input[type="submit"]:hover {
+    background-color: #449d44;
+}
+
+.grocrm-error {
+    color: #FC363B;
+}
