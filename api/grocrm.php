@@ -705,6 +705,14 @@ class GroCRM_API {
     }
     
     public function createContact($parameters) {
+        
+        // Create an account if needed
+        if (isset($parameters["company"])) {
+	        $accountID = $this->createAccount(["type_id" => $parameters["type_id"], "name" => $parameters["company"]]);
+	        
+	        $parameters["account_id"] = $accountID;
+        }
+        
         $args = [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -712,6 +720,8 @@ class GroCRM_API {
             ],
             'body' => json_encode($parameters),
         ];
+        
+
         
         $url = self::BASE_URL."contacts";
 
@@ -722,6 +732,34 @@ class GroCRM_API {
         
         if ($statusCode == 201) {
             return true;
+        } elseif (isset($bodyArray["message"])) {
+            throw new \Exception($bodyArray["message"], $statusCode);
+        } else {
+            throw new \Exception("An error has occurred. Please try again later.", $statusCode);
+        }
+    }
+    
+    private function createAccount($parameters) {
+	    
+	    $parameters["is_account"] = true;
+	    
+	    $args = [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Token '.$this->token,
+            ],
+            'body' => json_encode($parameters),
+        ];
+	    
+	    $url = self::BASE_URL."contacts";
+	    
+	    $response = wp_remote_post($url, $args);
+        $statusCode = $response["response"]["code"];
+        $body = $response["body"];
+        $bodyArray = json_decode($body, true);
+        
+        if ($statusCode == 201) {
+            return $bodyArray["id"];
         } elseif (isset($bodyArray["message"])) {
             throw new \Exception($bodyArray["message"], $statusCode);
         } else {

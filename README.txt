@@ -3,13 +3,15 @@ Contributors: grocrm
 Tags: crm, contact, contacts, signup, marketing, leads, contact form, contact form plugin, Gro CRM, grocrm.com, secure form, web to lead, web to contact, crm forms, crm leads, lead, leads, lead tracking, form, forms
 Requires at least: 4.7.3
 Tested up to: 4.7.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Mac CRM sales platform designed for iOS and the Apple Small Business market. Use our Gro CRM Contact-to-Leads WordPress Plug-in for your website.
+The Mac CRM small business platform designed for iOS and the Apple business market. Use our Gro CRM Contact-to-Leads WordPress Plug-in for your website.
 
 == Description ==
+
+Use our Gro CRM Contact-to-Leads WordPress Plug-in for your website. Gro CRM is the Mac CRM small business platform designed for the iPhone, iPad and the Apple business market. Transform your business today with our Wordpress Plugin.
 
 Convert Wordpress forms into leads. Gro CRM creates an easy integration between your WordPress install(s) and your
 Gro CRM account! People can enter a their contact info on your site, and the lead information goes straight into Gro CRM:
@@ -65,4 +67,8 @@ A. You can email us directly at "support@grocrm.com".
 
 = 1.0.0 =
 * Initial release
+
+= 1.0.1 =
+* Minor API fixes
+* Description updates
 

@@ -165,6 +165,7 @@ class Grocrm_Admin {
         
         
         $defaultTags = preg_replace('/\s+/', '', sanitize_text_field($_POST["grocrm_default_tags"]));
+        $defaultTags = explode(",", $defaultTags);
         update_option( "grocrm_default_tags", $defaultTags);        
         
         $this->update_checkbox('grocrm_css_disabled');

@@ -130,7 +130,7 @@
                             
                             <?php
                             foreach ($grocrm_types as $type) {
-                                $id = $type["ID"];
+                                $id = $type["id"];
                                 $value = $type["value"];
                                 
                                 echo "<option value=$id".selected(get_option("grocrm_default_type"), $id, false).">".$value."</option>";
@@ -147,7 +147,7 @@
                         <label for="grocrm_default_tags"><?php esc_html_e('Default tags', 'grocrm'); ?></label>
                     </div>
                     <div class="grocrm-col-8">
-                        <input type="text" id="grocrm_default_tags" name="grocrm_default_tags" placeholder="ex. website,contact-form" value="<?php echo esc_attr(get_option("grocrm_default_tags")); ?>">
+                        <input type="text" id="grocrm_default_tags" name="grocrm_default_tags" placeholder="ex. website,contact-form" value="<?php echo esc_attr(implode(",", get_option("grocrm_default_tags"))); ?>">
                         <p><?php esc_html_e('Insert tags that you would like to be attached to these contacts. Comma separated. No spaces allowed.', 'grocrm'); ?></p>
                     </div>
                 </div>

@@ -151,9 +151,8 @@ class Grocrm_Public {
             $defaultType = get_option("grocrm_default_type", 3);
             $defaultTags = get_option("grocrm_default_tags");
             
-            
             $parameters = [
-                "type" => $defaultType,
+                "type_id" => $defaultType,
                 "tags" => $defaultTags
             ];
                         
@@ -168,8 +167,8 @@ class Grocrm_Public {
             $parameters["address2"] = $this->get_value("grocrm_address2");
             $parameters["city"] = $this->get_value("grocrm_city");
             $parameters["state"] = $this->get_value("grocrm_state");
-            $parameters["country"] = $this->get_value("grocrm_country");
-            $parameters["time_zone"] = $this->get_value("grocrm_timezone");
+            $parameters["country_id"] = $this->get_value("grocrm_country");
+            $parameters["timezone_id"] = $this->get_value("grocrm_timezone");
             $parameters["phone"] = $this->get_value("grocrm_phone");
             $parameters["mobile"] = $this->get_value("grocrm_mobile");
             
