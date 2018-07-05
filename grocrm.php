@@ -16,7 +16,7 @@
  * Plugin Name:       Gro CRM
  * Plugin URI:        https://www.grocrm.com/developer/api/
  * Description:       The Mac CRM sales platform designed for iOS and the Apple Small Business market. Use our Gro CRM Contact-to-Leads WordPress Plug-in for your website.
- * Version:           1.0.0
+ * Version:           1.0.2
  * Author:            Gro CRM
  * Author URI:        https://www.grocrm.com/
  * License:           GPL-2.0+

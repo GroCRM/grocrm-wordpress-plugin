@@ -13,13 +13,9 @@
  */
 ?>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->  
 <header class="grocrm-header">
-    <img alt="Gro CRM Logo" height="80" src="<?php echo plugin_dir_url( __FILE__ ) . "../images/gro_crm_logo.png" ?>">
     <h1><?php esc_html_e( 'Contact-to-Leads', 'grocrm'); ?></h1>
     <h3 style="padding-bottom: 20px;"><?php esc_html_e( 'Convert Wordpress forms into Gro CRM leads', 'grocrm'); ?></h3>
-    <div class="grocrm-background-analytic" style="height:50px;"></div>
-    <div style="background-color: #FDB12A; width: 100%; height: 40px;"></div>
 </header>
 
 <?php if ( !get_option("grocrm_api_key") || empty(get_option("grocrm_api_key"))) { ?>
@@ -147,7 +143,16 @@
                         <label for="grocrm_default_tags"><?php esc_html_e('Default tags', 'grocrm'); ?></label>
                     </div>
                     <div class="grocrm-col-8">
-                        <input type="text" id="grocrm_default_tags" name="grocrm_default_tags" placeholder="ex. website,contact-form" value="<?php echo esc_attr(implode(",", get_option("grocrm_default_tags"))); ?>">
+                        <?php
+                            $tags = get_option("grocrm_default_tags");
+                            
+                            if (empty($tags)) {
+                                $tags = [];
+                            }
+                            
+                            $tagString = implode(",", $tags);
+                        ?>
+                        <input type="text" id="grocrm_default_tags" name="grocrm_default_tags" placeholder="ex. website,contact-form" value="<?php echo esc_attr($tagString); ?>">
                         <p><?php esc_html_e('Insert tags that you would like to be attached to these contacts. Comma separated. No spaces allowed.', 'grocrm'); ?></p>
                     </div>
                 </div>
@@ -167,6 +172,10 @@
                     
                     <?php
                         $grocrm_field_keys = get_option("grocrm_field_keys");
+                        
+                        if (empty($grocrm_field_keys)) {
+                            $grocrm_field_keys = [];
+                        }
                                                 
                         foreach (grocrm_fields() as $key => $value) {
                             

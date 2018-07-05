@@ -59,7 +59,7 @@ body.grocrm-page #wpcontent {
 
 .grocrm-body {
     width: 100%;
-    background-color: #FDB12A;
+    background-color: #22cbc0;
 }
 
 /* Tabs */
@@ -80,7 +80,7 @@ body.grocrm-page #wpcontent {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    background-color: #A77418;   
+    background-color: #257da6;   
     padding: 20px 30px; 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -127,7 +127,9 @@ body.grocrm-page #wpcontent {
     display: block;
     background-color: #272C31;
     margin: 0px;
-    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(#2e759a, #22cbc0);
 }
 
 .grocrm-header h1 {
@@ -136,7 +138,7 @@ body.grocrm-page #wpcontent {
 }
 
 .grocrm-header h3 {
-    color: #888b8d;
+    color: #ffffff;
     font-weight: 200;
     text-align: center;
 }

@@ -96,7 +96,9 @@ class Grocrm_Public {
 	}
 	
 	public function form_shortcode($atts) {
+    	ob_start();
         include_once 'partials/grocrm-public-display.php';
+        return ob_get_clean();
     }
     
     public function validate_input() {
@@ -106,6 +108,10 @@ class Grocrm_Public {
             $fields = grocrm_fields();
             $field_keys = get_option("grocrm_field_keys");
             $phoneRegex = '/^[+]?([\d]{0,3})?[\(\.\-\s]?(([\d]{1,3})[\)\.\-\s]*)?(([\d]{3,5})[\.\-\s]?([\d]{4})|([\d]{2}[\.\-\s]?){4})$/';
+            
+            if (empty($field_keys)) {
+                $field_keys = [];
+            }
             
             foreach ($field_keys as $key) {
                 
@@ -151,6 +157,10 @@ class Grocrm_Public {
             $defaultType = get_option("grocrm_default_type", 3);
             $defaultTags = get_option("grocrm_default_tags");
             
+            if (empty($defaultTags)) {
+                $defaultTags = null;
+            }
+            
             $parameters = [
                 "type_id" => $defaultType,
                 "tags" => $defaultTags
@@ -183,7 +193,7 @@ class Grocrm_Public {
                 
                 $parameters["notes"] = $notes;
             }
-             
+                         
             $this->grocrm_success = true;
                                     
             try {

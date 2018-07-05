@@ -14,6 +14,6 @@ Download our contacts-to-leads plugin today. Learn more at <https://www.grocrm.c
 
 License
 -------
-Copyright 2017 [Gro CRM](https://www.grocrm.com)
+Copyright 2018 [Gro CRM](https://www.grocrm.com)
 
 Licensed under GPLv2 or later. Details in the license file.

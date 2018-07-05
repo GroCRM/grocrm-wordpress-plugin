@@ -2,8 +2,8 @@
 Contributors: grocrm
 Tags: crm, contact, contacts, signup, marketing, leads, contact form, contact form plugin, Gro CRM, grocrm.com, secure form, web to lead, web to contact, crm forms, crm leads, lead, leads, lead tracking, form, forms
 Requires at least: 4.7.3
-Tested up to: 4.7.3
-Stable tag: 1.0.1
+Tested up to: 4.9.6
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,4 +71,8 @@ A. You can email us directly at "support@grocrm.com".
 = 1.0.1 =
 * Minor API fixes
 * Description updates
+
+= 1.0.2 =
+* Shortcode API compatibility fixes
+* Wordpress 4.9.6 Updates
 
